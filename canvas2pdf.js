@@ -97,10 +97,16 @@
     this.stream = doc.pipe(stream);
     this.doc = doc;
 
-    var fontValue = '10px Helvetica';
-    this.textAlign = 'left';
-    this.textBaseline = 'alphabetic';
-    var fontRegex = /^\s*(?=(?:(?:[-a-z]+\s*){0,2}(italic|oblique))?)(?=(?:(?:[-a-z]+\s*){0,2}(small-caps))?)(?=(?:(?:[-a-z]+\s*){0,2}(bold(?:er)?|lighter|[1-9]00))?)(?:(?:normal|\1|\2|\3)\s*){0,3}((?:xx?-)?(?:small|large)|medium|smaller|larger|[.\d]+(?:\%|in|[cem]m|ex|p[ctx]))(?:\s*\/\s*(normal|[.\d]+(?:\%|in|[cem]m|ex|p[ctx])))?\s*([-,\'\"\sa-z]+?)\s*$/i;
+    this.stack = [];
+    var lineWidth = 1;
+
+
+
+    var fontValue = "10px Helvetica";
+    this.textAlign = "left";
+    this.textBaseline = "alphabetic";
+    var fontRegex =
+      /^\s*(?=(?:(?:[-a-z]+\s*){0,2}(italic|oblique))?)(?=(?:(?:[-a-z]+\s*){0,2}(small-caps))?)(?=(?:(?:[-a-z]+\s*){0,2}(bold(?:er)?|lighter|[1-9]00))?)(?:(?:normal|\1|\2|\3)\s*){0,3}((?:xx?-)?(?:small|large)|medium|smaller|larger|[.\d]+(?:\%|in|[cem]m|ex|p[ctx]))(?:\s*\/\s*(normal|[.\d]+(?:\%|in|[cem]m|ex|p[ctx])))?\s*([-,\'\"\sa-z]+?)\s*$/i;
     var defaultFontData = {
       style: 'normal',
       size: 10,
@@ -135,9 +141,14 @@
         _this.doc.strokeColor(color.c, color.a);
       },
     });
-    Object.defineProperty(this, 'lineWidth', {
-      get: function () { return _this.doc.lineWidth(); },
-      set: function (value) { _this.doc.lineWidth(value); },
+    Object.defineProperty(this, "lineWidth", {
+      get: function () {
+        return lineWidth;
+      },
+      set: function (value) {
+        lineWidth = value;
+        _this.doc.lineWidth(value);
+      },
     });
 
     Object.defineProperty(this, 'lineCap', {
