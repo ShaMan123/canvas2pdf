@@ -14,6 +14,7 @@
   "author": {
     "name": "Joshua Gould"
   },
+  "files": ["canvas2pdf.js","./lib/pdfkit.standalone.js"],
   "main": "canvas2pdf.js",
   "keywords": [
     "pdf",
