@@ -33,6 +33,6 @@
     "phantomjs": "^2.1.7"
   },
   "dependencies": {
-    "pdfkit": "^0.13.0"
+    "pdfkit": "file:./lib/pdfkit.standalone.js"
   }
 }
