@@ -12,7 +12,7 @@
  */
 const PDFDocument = require("./lib/pdfkit.standalone");
 (function (global) {
-  'use strict';
+  "use strict";
   /**
    * @name canvas2pdf
    * @namespace
@@ -474,7 +474,6 @@ const PDFDocument = require("./lib/pdfkit.standalone");
   };
 
   canvas2pdf.PdfContext.prototype.fillText = function (text, x, y) {
-    this.addToPath("fillText", arguments);
     x = this.adjustTextX(text, x);
     y = this.adjustTextY(text, y);
     this.doc.text(text, x, y, {
