@@ -11,7 +11,7 @@
  *  Copyright (c) 2017 Joshua Gould
  */
 const PDFDocument = require("pdfkit");
-const blobStream = require("blob-stream");
+const blobStream = require("./blob-stream");
 
 (function (global) {
   "use strict";
