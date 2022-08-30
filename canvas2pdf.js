@@ -10,7 +10,7 @@
  *
  *  Copyright (c) 2017 Joshua Gould
  */
-const PDFDocument = require("./lib/pdfkit.standalone");
+const PDFDocument = require("pdfkit");
 const blobStream = require("blob-stream");
 
 (function (global) {
