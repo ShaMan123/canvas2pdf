@@ -21,7 +21,7 @@
     "canvas2pdf"
   ],
   "files": [
-    "canvas2pdf.js"
+    "canvas2pdf.js", "blob-stream.js"
   ],
   "scripts": {
     "test:generate-images": "phantomjs test/generate.images.js",
