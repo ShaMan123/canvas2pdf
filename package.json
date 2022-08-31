@@ -21,7 +21,7 @@
     "canvas2pdf"
   ],
   "files": [
-    "canvas2pdf.js", "blob-stream.js"
+    "canvas2pdf.js", "./node_modules/pdfkit/*"
   ],
   "scripts": {
     "test:generate-images": "phantomjs test/generate.images.js",
@@ -35,7 +35,6 @@
     "phantomjs": "^2.1.7"
   },
   "dependencies": {
-    "blob-stream": "file:./blob-stream",
     "pdfkit": "github:ajo01/pdfkit"
   }
 }
