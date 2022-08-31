@@ -20,9 +20,6 @@
     "canvas",
     "canvas2pdf"
   ],
-  "files": [
-    "canvas2pdf.js", "./node_modules/pdfkit/*"
-  ],
   "scripts": {
     "test:generate-images": "phantomjs test/generate.images.js",
     "test:convert-pdfs": "node test/convert.pdf.to.png.js",
