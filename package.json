@@ -35,6 +35,6 @@
     "phantomjs": "^2.1.7"
   },
   "dependencies": {
-    "pdfkit": "github:ajo01/pdfkit"
+    "pdfkit": "github:PDFTron/pdfkit#v1.0.0"
   }
 }
